@@ -5,7 +5,10 @@
   "main": "db.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "webpack",
+    "build:dev": "npm run build -- --watch --mode=development",
+    "start:dev": "npm run build:dev & nodemon server --ignore dist/ --ignore src/"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "nodemon": "^2.0.15",
     "pg": "^8.7.1",
     "sequelize": "^6.12.0-beta.1"
   }
