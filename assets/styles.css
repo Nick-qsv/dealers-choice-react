@@ -1,0 +1,19 @@
+.header--container {
+    display:flex;
+    background: burlywood;
+    height:100px;
+    align-items:center;
+    justify-content: center;
+    border: solid;
+    padding: 10px;
+}
+.header--logo{
+    height: 100%;
+    padding:20px;
+
+}
+.header--text {
+    font-family:garamond;
+    color: white;
+    font-size: 60px;
+}
