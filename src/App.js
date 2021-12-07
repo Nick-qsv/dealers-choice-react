@@ -22,7 +22,7 @@ export default class App extends Component{
         return(<div id='main'>
             <Header />
             <AllBooks books={books}/>
-            {/* <AddBook /> */}
+            <AddBook />
         </div>)
     }
 }

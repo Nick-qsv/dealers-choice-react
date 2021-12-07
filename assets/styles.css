@@ -1,10 +1,10 @@
 *{
     background:azure;
-    font-family:verdana;
+    font-family: "Karla", sans-serif;
 }
 .header--container {
     display:flex;
-    background: burlywood;
+    background: #4d4dae;
     height:100px;
     align-items:center;
     justify-content: center;
@@ -14,13 +14,13 @@
 .header--logo{
     height: 80%;
     padding:20px;
-    background: burlywood;
+    background: #4d4dae
 }
 .header--text {
 
-    color: white;
+    color:whitesmoke;
     font-size: 45px;
-    background: burlywood;
+    background: #4d4dae
 }
 
 .single-book--container{
@@ -52,4 +52,43 @@
 }
 .single-book--content{
     margin-top: 0rem;
+}
+
+.single-book--button{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.addbook--container{
+    
+    margin-right: 30px;
+    margin-left:30px;
+    margin-bottom:30px;
+}
+
+.form{
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+    margin-bottom: 17px;
+}
+.form--input{
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+    background: white;
+}
+.form--button{
+    grid-column: 1 / -1;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #211f8d 1.14%, #4454ed 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
