@@ -44,3 +44,5 @@ const init = async()=>{
 }
 
 init();
+
+module.exports = app

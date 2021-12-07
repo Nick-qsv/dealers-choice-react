@@ -1,3 +1,7 @@
+*{
+    background:azure;
+    font-family:verdana;
+}
 .header--container {
     display:flex;
     background: burlywood;
@@ -8,12 +12,44 @@
     padding: 10px;
 }
 .header--logo{
-    height: 100%;
+    height: 80%;
     padding:20px;
-
+    background: burlywood;
 }
 .header--text {
-    font-family:garamond;
+
     color: white;
-    font-size: 60px;
+    font-size: 45px;
+    background: burlywood;
+}
+
+.single-book--container{
+ display:flex;
+ padding: 20px;
+ align-items: center;
+ border-bottom: 1px solid black;
+}
+.single-book--image{
+    max-width: 200px;
+    height: 300px;
+    padding: 25px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.single-content-div{
+    
+    flex-direction:column;
+}
+
+.single-book--title{
+    font-size: 30px;
+    font-style: italic
+}
+.single-book--author{
+    font-size: 20px;
+    
+}
+.single-book--content{
+    margin-top: 0rem;
 }

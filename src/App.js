@@ -10,16 +10,18 @@ export default class App extends Component{
     constructor(){
         super();
         this.state ={
-            //not sure
+            books: []
         }
     }
-    // async componentDidMount(){
-
-    // }
+    async componentDidMount(){
+        const books = (await axios.get('/books')).data;
+        this.setState({books})
+    }
     render(){
+        const {books}= this.state;
         return(<div id='main'>
             <Header />
-            {/* <AllBooks /> */}
+            <AllBooks books={books}/>
             {/* <AddBook /> */}
         </div>)
     }

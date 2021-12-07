@@ -5,11 +5,16 @@ export default function Book(props){
     <div>
         {props.books.map((book)=>{
             return (
-                <div className="single-book--container">
-                <img src={book.coverUrl}/>
-                    <b>Title: </b><h2 className="single-book--title">{book.title}</h2>
-                    <b>Author: </b><h4 className="single-book--author">{book.author}</h4>
-                    <b>Description: </b><p className="single-book--content">{book.content}</p>
+                
+                <div className="single-book--container" key={book.id}>
+                    <hr></hr>
+                 <img src={book.coverUrl} className='single-book--image'/>
+                    <div className="single-content-div">
+                        <h2 className="single-book--title">{book.title}</h2>
+                        <h4 className="single-book--author">{book.author}</h4>
+                        <b>Description: </b><p className="single-book--content">{book.content}</p>
+                    </div>
+                    <hr></hr>
                 </div>
             )
         })}
