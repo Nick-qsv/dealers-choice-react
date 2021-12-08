@@ -1,7 +1,6 @@
 const {syncAndSeed, Book} = require('./db');
 const express = require('express');
 const path = require('path');
-
 const app = express();
 
 app.use(express.json())
@@ -22,6 +21,18 @@ app.get('/books', async (req, res, next)=>{
         next(ex);
     }
 })
+
+app.delete('/books/delete-book/:id', async (req, res, next)=>{
+    try{
+        const oneBook = await Book.findByPk(req.params.id)
+        oneBook.destroy();
+        res.send(await Book.findAll())
+    }
+    catch(ex){
+        next(ex);
+    }
+})
+
 
 // app.get('/api/users/:id', async (req, res, next)=>{
 //     try{
