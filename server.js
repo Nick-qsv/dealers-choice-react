@@ -33,7 +33,15 @@ app.delete('/books/delete-book/:id', async (req, res, next)=>{
     }
 })
 
-
+app.post('/books/add-book', async (req, res, next)=>{
+    try{
+        const newBook = req.body
+        const book = await Book.create(newBook)
+        res.send(book)
+    }catch(ex){
+        next(ex);
+    }
+})
 // app.get('/api/users/:id', async (req, res, next)=>{
 //     try{
 //         res.send(await User.findByPk(req.params.id));

@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Book(props){
-    console.log(props)
     return(
     <div>
         {props.books.map((book)=>{
